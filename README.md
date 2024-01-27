@@ -5,15 +5,13 @@
 This is an official code repository for our paper **Modeling the Trade-off of Privacy Preservation and Activity Recognition on Low-Roslution Images**.
 
 In this paper, we proposed a framework for modeling the trade-off of privacy preservation and activity recognition on low-resolution images. Inspired by previous work, we define the following model to understand the trade-off:
-$$
-S(r) = L_T\left(f_T(f_r(\mathcal{X})), g_T(\mathcal{X})\right) - 
-\lambda \sum_{i=1}^{n} \omega_i L_{P_i}\left(f_{P_i}(f_r(\mathcal{X})), g_{P_i}(\mathcal{X})\right)
-$$
+$S(r) = L_T\left(f_T(f_r(\mathcal{X})), g_T(\mathcal{X})\right) - 
+\lambda \sum_{i=1}^{n} \omega_i L_{P_i}\left(f_{P_i}(f_r(\mathcal{X})), g_{P_i}(\mathcal{X})\right)$
 In the proposed model, $f_r(\mathcal{X})$ denotes the captured dataset at the resolution $r$. $f_T(\cdot)$ and $f_{P_i}(\cdot)$ denote recognition functions. $L_T(\cdot)$ and $L_{P_i}(\cdot)$ denote evaluation functions. $\omega_i$ denotes the importance weight of each privacy feature. $\lambda$ is a factor measuring the sensitivity ratio between privacy preservation and activity recognition.
 
 We designed a pipeline to implement the model. In our paper, we used the PA-HMDB dataset as a demonstration. First, we collected the importance weights through a user study. Based on the results, we annotated the dataset with privacy feature labels. Second, we investigated the effect of image resolution ($r$) on the recognition performance of both humans and machines by conducting user studies and experimenting with vision models. In the end, we calculated the results for modeling the trade-off of privacy preservation and activity recognition.
 
-<img src="./documentation/framework.pdf">
+<img src="./documentation/framework.jpg">
 
 In this repository, we presented the source code for part of the implementation pipeline. For details of the whole process (e.g., user studies) please see our [paper](https://dl.acm.org/doi/abs/10.1145/3544548.3581425).
 
